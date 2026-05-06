@@ -1,0 +1,9 @@
+Dai test effettuati emerge chiaramente che le prestazioni degli algoritmi di ordinamento dipendono in modo significativo sia dalla dimensione dei vettori sia dalla modalità di compilazione del codice. In particolare, per vettori di grandi dimensioni, il Quicksort conferma il vantaggio teorico legato alla sua complessità O(nlogn), risultando più efficiente rispetto agli algoritmi con complessità quadratica. Al contrario, per vettori di dimensioni ridotte, gli algoritmi più semplici si dimostrano competitivi.
+
+Tra gli algoritmi quadratici, l’Insertion Sort risulta il più efficiente, arrivando spesso a superare anche il Quicksort per vettori fino a circa 20 elementi. Questo comportamento è coerente con il minor overhead e la maggiore località di riferimento tipici dell’algoritmo.
+
+Il Mergesort, pur avendo anch’esso complessità O(nlogn), risulta meno competitivo sui vettori di piccole dimensioni. Ciò è probabilmente dovuto al costo aggiuntivo della fase di merge, che richiede la creazione di strutture temporanee e la copia degli elementi.
+
+Il confronto tra compilazione in modalità Debug e Release evidenzia differenze marcate: in modalità Debug i tempi di esecuzione risultano mediamente più elevati, e lo Standard Sort si colloca subito dopo il Quicksort e la sua versione ottimizzata. In modalità Release, invece, lo Standard Sort beneficia significativamente delle ottimizzazioni del compilatore, migliorando sensibilmente le proprie prestazioni. Tuttavia, non risulta sempre il migliore in assoluto, ma spesso si trova a competere con Quicksort, Quicksort ottimizzato e Insertion Sort.
+
+Infine, è importante sottolineare che i tempi di esecuzione sono soggetti a rumore di misurazione: piccole variazioni dovute a fattori esterni possono influenzare i risultati. Questo spiega perché, in alcuni casi, il Quicksort standard possa risultare leggermente più veloce della versione ottimizzata.
